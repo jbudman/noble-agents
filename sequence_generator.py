@@ -26,6 +26,7 @@ def generate_sequence(persona, pain_point, steps, product_value=None, tone=None)
     - Subject line
     - Email body (4-6 sentences max)
     - Vary tone/pitch across steps (e.g., consultative, casual, bold, social proof)
+    - Please avoid sounding like spam or sales-y
     """
 
     response = client.chat.completions.create(
