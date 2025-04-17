@@ -1,0 +1,3 @@
+streamlit
+openai
+python-dotenv  # optional if using local .env files
