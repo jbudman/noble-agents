@@ -24,7 +24,7 @@ def generate_sequence(persona, pain_point, steps, product_value=None, tone=None)
 
     Generate a {steps}-step cold email sequence. Each step should include:
     - Subject line
-    - Email body (2–4 sentences max)
+    - Email body (4-6 sentences max)
     - Vary tone/pitch across steps (e.g., consultative, casual, bold, social proof)
     """
 
