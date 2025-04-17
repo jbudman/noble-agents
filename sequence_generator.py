@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 # Load your OpenAI API key from environment or set it directly
 load_dotenv()
-openai.api_key = st.secrets["OPENAI_API_KEY"]
+client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
 def generate_sequence(persona, pain_point, steps, product_value=None, tone=None):
     system_prompt = (
