@@ -28,7 +28,7 @@ def generate_sequence(persona, pain_point, steps, product_value=None, tone=None)
     - Vary tone/pitch across steps (e.g., consultative, casual, bold, social proof)
     """
 
-    response = openai.ChatCompletion.create(
+    response = client.chat.completions.create(
         model="gpt-4",
         messages=[
             {"role": "system", "content": system_prompt},
@@ -37,7 +37,7 @@ def generate_sequence(persona, pain_point, steps, product_value=None, tone=None)
         temperature=0.8,
     )
 
-    return response['choices'][0]['message']['content']
+    return response.choices[0].message.content
 
 # Streamlit App
 st.set_page_config(page_title="Cold Email Sequence Generator", layout="centered")
